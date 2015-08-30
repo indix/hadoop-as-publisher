@@ -25,6 +25,9 @@ doc = BeautifulSoup(html)
 supply = Supply(doc)
 demand = Demand(doc)
 
+# TODO - Compute AutoScaling Metric and push them since CloudWatch doesn't support
+# creating alaram using multiple metrics
+
 # Send hadoop metrics
 watch = boto.connect_cloudwatch()
 watch.put_metric_data(METRIC_NAMESPACE, "nodes", supply.nodes(), dimensions = METRIC_DIMENSION)
