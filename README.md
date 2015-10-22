@@ -8,7 +8,9 @@ This is a simple python program that is expected to run on Cron on the JobTracke
 - Number of Map slots Required
 - Number of Reduce Slots Required
 
-We push all these metrics to Cloudwatch periodcially. You can then create alarms which could trigger autoscaling of Hadoop Clusters.
+We push all these metrics to Cloudwatch periodcially. You can then create alarms which could trigger autoscaling of Hadoop Clusters. When visualized it as a Demand vs Supply it looks like this
+
+![CloudWatch Dashboard](https://raw.githubusercontent.com/ashwanthkumar/hadoop-as-publisher/master/docs/cloudwatch-dashboard.png)
 
 ## Status
 This is the bare bones implementation and should be considered alpha quality software.
