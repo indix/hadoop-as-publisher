@@ -10,4 +10,9 @@ This is a simple python program that is expected to run on Cron on the JobTracke
 
 We push all these metrics to Cloudwatch periodcially. You can then create alarms which could trigger autoscaling of Hadoop Clusters.
 
-NOTE - This is a WIP as of now.
+## Status
+This is the bare bones implementation and should be considered alpha quality software.
+
+## License
+Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
+
