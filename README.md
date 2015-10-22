@@ -1,4 +1,4 @@
-# Hadoop Autoscaling Metric Collector
+# Hadoop Autoscaling Metric Publisher
 
 This is a simple python program that is expected to run on Cron on the JobTracker machine. We collect hadoop metrics like
 
