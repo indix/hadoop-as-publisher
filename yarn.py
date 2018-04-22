@@ -8,7 +8,10 @@ import json
 import boto
 import socket
 
-HOSTNAME = socket.gethostbyaddr(socket.gethostname())[0]
+if socket.getfqdn().find('.') >= 0:
+    HOSTNAME= socket.getfqdn()
+else:
+    HOSTNAME = socket.gethostbyaddr(socket.gethostname())[0]
 JOB_TRACKER_URL = "http://" + HOSTNAME + ":8088/ws/v1/cluster/metrics/"
 
 config = json.load(open("config.json"))
