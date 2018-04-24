@@ -29,6 +29,7 @@ containers_allocated = yarn_cm['clusterMetrics']['containersAllocated']
 containers_pending = yarn_cm['clusterMetrics']['containersPending']
 mem_allocated = max(yarn_cm['clusterMetrics']['allocatedMB'], 1)
 total_memory = yarn_cm['clusterMetrics']['totalMB']
+apps_running = yarn_cm['clusterMetrics']['appsRunning']
 mem_health = total_memory / mem_allocated
 
 unhealthy_nodes = yarn_cm['clusterMetrics']['unhealthyNodes']
@@ -41,3 +42,4 @@ watch.put_metric_data(METRIC_NAMESPACE, "containers_allocated", containers_alloc
 watch.put_metric_data(METRIC_NAMESPACE, "containers_pending", containers_pending, dimensions=METRIC_DIMENSION)
 watch.put_metric_data(METRIC_NAMESPACE, "mem_health", mem_health, dimensions = METRIC_DIMENSION)
 watch.put_metric_data(METRIC_NAMESPACE, "unhealthy_nodes", unhealthy_nodes, dimensions = METRIC_DIMENSION)
+watch.put_metric_data(METRIC_NAMESPACE, "apps_running", apps_running, dimensions = METRIC_DIMENSION)
